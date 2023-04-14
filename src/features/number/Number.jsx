@@ -1,26 +1,27 @@
+import React, { useContext, useState } from "react";
 import Button from "components/button";
-import React, { useState } from "react";
+import { DataContext } from "context/dataContext";
+import { Link } from "react-router-dom";
 
-const questionNumber = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-];
 const Number = () => {
   const [number, setNumber] = useState([]);
+  const { setQno, pageNumber } = useContext(DataContext);
   const clickHandler = (n) => {
     setNumber([...number, n]);
+    setQno(n);
   };
   return (
     <div className="w-full md:w-1/4 flex items-center flex-col gap-5 bg-blue-100 p-6">
-      {number}
+      {/* {number} */}
       <h2 className="text-center text-3xl font-black">Questions</h2>
       <div className="flex flex-wrap items-center justify-center gap-5">
-        {questionNumber.map((n, i) => (
+        {[...new Array(pageNumber)].map((_, i) => (
           <span
             key={i}
-            onClick={() => clickHandler(n)}
+            onClick={() => clickHandler(i + 1)}
             className="flex flex-wrap items-center justify-center h-10 w-10 bg-blue-500 rounded-md hover:bg-blue-300 cursor-pointer text-white font-semibold"
           >
-            {n}
+            {i + 1}
           </span>
         ))}
       </div>
@@ -38,9 +39,11 @@ const Number = () => {
           <p>Skipped</p>
         </div>
       </div>
-      <Button buttonType="google" className="w-44">
-        Finish Exam
-      </Button>
+      <Link to="/result">
+        <Button buttonType="google" className="w-44">
+          Finish Exam
+        </Button>
+      </Link>
     </div>
   );
 };

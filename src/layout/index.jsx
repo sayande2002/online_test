@@ -20,8 +20,9 @@ const Layout = ({ children }) => {
         theme="dark"
       />
       <Navbar />
-      <div style={{ marginTop: "100px", paddingTop: "0.2rem" }}>{children}</div>
-      <Footer />
+      <div style={{ marginTop: "100px", paddingTop: "0.2rem", height: "80vh" }}>
+        {children}
+      </div>
       <ScrollTop />
     </>
   );
