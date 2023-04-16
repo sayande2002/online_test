@@ -7,9 +7,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src/**/*.js src/**/*.jsx",
-    "lint:fix": "eslint --fix",
-    "lint:strict": "eslint --max-warnings=0 src",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },

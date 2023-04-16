@@ -1,6 +1,5 @@
-import React, {Suspense} from 'react';
+import React from 'react';
 import Layout from 'layout';
-import Spinner from 'components/spinner';
 
 const RenderPage = ({Page}) => {
   return (
