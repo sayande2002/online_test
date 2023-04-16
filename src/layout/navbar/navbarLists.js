@@ -9,11 +9,11 @@ export const navbarLists = [
     route: "/",
   },
   {
-    id: 2,
-    name: "About Us",
+    // id: 2,
+    // name: "About Us",
     // component: (
     //   <PeopleAltOutlinedIcon style={{ fill: "black", fontSize: "30px" }} />
     // ),
-    route: "/about",
+    // route: "/about",
   },
 ];

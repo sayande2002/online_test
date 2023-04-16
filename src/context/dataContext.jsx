@@ -7,7 +7,9 @@ const Dataprovider = ({ children }) => {
   const [qno, setQno] = useState(1);
   const [pageNumber, setPageNumber] = useState(0);
   const [options, setOptions] = useState([]);
-  const [answer, setAnswer] = useState([...new Array(pageNumber)]);
+  const [radio, setRadio] = useState("");
+  const a = [...new Array(5).fill(0)];
+  const [answer, setAnswer] = useState([...a]);
 
   useEffect(() => {
     fetch(`http://localhost:5000/api/v1/getAllQuestion?page=${qno}`)
@@ -18,6 +20,8 @@ const Dataprovider = ({ children }) => {
         setPageNumber(data.totalcountQuestion);
       });
   }, [qno]);
+  console.log("3", answer);
+
   return (
     <DataContext.Provider
       value={{
@@ -28,6 +32,8 @@ const Dataprovider = ({ children }) => {
         pageNumber,
         answer,
         setAnswer,
+        radio,
+        setRadio,
       }}
     >
       {children}

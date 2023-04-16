@@ -1,25 +1,28 @@
 import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import Button from "components/button";
 import { DataContext } from "context/dataContext";
-import { Link } from "react-router-dom";
 
 const Number = () => {
   const [number, setNumber] = useState([]);
-  const { setQno, pageNumber } = useContext(DataContext);
+  const { qno, setQno, pageNumber, answer } = useContext(DataContext);
   const clickHandler = (n) => {
     setNumber([...number, n]);
     setQno(n);
   };
+  const numberHandler = (i) => clickHandler(i + 1);
   return (
     <div className="w-full md:w-1/4 flex items-center flex-col gap-5 bg-blue-100 p-6">
-      {/* {number} */}
       <h2 className="text-center text-3xl font-black">Questions</h2>
       <div className="flex flex-wrap items-center justify-center gap-5">
         {[...new Array(pageNumber)].map((_, i) => (
           <span
             key={i}
-            onClick={() => clickHandler(i + 1)}
-            className="flex flex-wrap items-center justify-center h-10 w-10 bg-blue-500 rounded-md hover:bg-blue-300 cursor-pointer text-white font-semibold"
+            onClick={() => numberHandler(i)}
+            className={`flex flex-wrap items-center justify-center h-10 w-10 ${
+              answer[i + 1] ? "bg-green-500" : ""
+            }  ${answer[i + 1] === 0 && i + 1 < qno ? "bg-red-500" : ""} 
+             rounded-md bg-blue-500 hover:bg-blue-300 cursor-pointer text-white font-semibold`}
           >
             {i + 1}
           </span>

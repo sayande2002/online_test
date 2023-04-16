@@ -1,13 +1,29 @@
 import Button from "components/button";
+import NewTooltip from "lib/tooltip";
 import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <dev>
+    <div className="flex items-center justify-center gap-5 mt-40">
+      {/* {document.cookies ? ( */}
       <Link to="/test">
         <Button buttonType="inverted">Take Test</Button>
       </Link>
-    </dev>
+      {/* ) : (
+        <>
+          <Link to="/login">
+            <NewTooltip title="Log In">
+              <Button buttonType="inverted">Log In</Button>
+            </NewTooltip>
+          </Link>
+          <Link to="/signup">
+            <NewTooltip title="Sign Up">
+              <Button buttonType="inverted">Sign Up</Button>
+            </NewTooltip>
+          </Link>
+        </>
+      )} */}
+    </div>
   );
 };
 

@@ -28,18 +28,7 @@ const Navbar = () => {
             </NewTooltip>
           </Link>
         ) : (
-          <>
-            <Link to="/login">
-              <NewTooltip title="Log In">
-                <Button buttonType="inverted">Log In</Button>
-              </NewTooltip>
-            </Link>
-            <Link to="/signup">
-              <NewTooltip title="Sign Up">
-                <Button buttonType="inverted">Sign Up</Button>
-              </NewTooltip>
-            </Link>
-          </>
+          <></>
         )}
       </div>
     </header>

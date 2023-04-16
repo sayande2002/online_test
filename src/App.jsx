@@ -4,26 +4,74 @@ import RenderPage from "utils/RenderPage";
 import "styles/tailwind.css";
 import "react-tippy/dist/tippy.css";
 import "react-toastify/dist/ReactToastify.css";
-const HomePage = lazy(() => import("pages/HomePage"));
-const AboutPage = lazy(() => import("pages/AboutPage"));
-const TestPage = lazy(() => import("pages/TestPage"));
-const ResultPage = lazy(() => import("pages/ResultPage"));
-const Login = lazy(() => import("pages/LoginPage"));
-const Signup = lazy(() => import("pages/SignupPage"));
-const Admin = lazy(() => import("pages/AminPage"));
-const ErrorPage = lazy(() => import("pages/ErrorPage"));
-
+import HomePage from "pages/HomePage";
+import TestPage from "pages/TestPage";
+import ResultPage from "pages/ResultPage";
+import Login from "pages/LoginPage";
+import Signup from "pages/SignupPage";
+import Admin from "pages/AminPage";
+import Error from "pages/ErrorPage";
+import Layout from "layout";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<RenderPage Page={HomePage} />} />
-      <Route path="/about" element={<RenderPage Page={AboutPage} />} />
-      <Route path="/test" element={<RenderPage Page={TestPage} />} />
-      <Route path="/result" element={<RenderPage Page={ResultPage} />} />
-      <Route path="/login" element={<RenderPage Page={Login} />} />
-      <Route path="/signup" element={<RenderPage Page={Signup} />} />
-      <Route path="/admin" element={<RenderPage Page={Admin} />} />
-      <Route path="*" element={<RenderPage Page={ErrorPage} />} />
+      <Route
+        path="/"
+        element={
+          <Layout>
+            <HomePage />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/test"
+        element={
+          <Layout>
+            <TestPage />
+          </Layout>
+        }
+      />
+      <Route
+        path="/result"
+        element={
+          <Layout>
+            <ResultPage />
+          </Layout>
+        }
+      />
+      <Route
+        path="/login"
+        element={
+          <Layout>
+            <Login />
+          </Layout>
+        }
+      />
+      <Route
+        path="/signup"
+        element={
+          <Layout>
+            <Signup />
+          </Layout>
+        }
+      />
+      <Route
+        path="/admin"
+        element={
+          <Layout>
+            <Admin />
+          </Layout>
+        }
+      />
+      <Route
+        path="*"
+        element={
+          <Layout>
+            <Error />
+          </Layout>
+        }
+      />
     </Routes>
   );
 }

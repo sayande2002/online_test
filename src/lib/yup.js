@@ -28,9 +28,3 @@ export const logInSchema = yup
       .min(6, "Password must be less than 6 character"),
   })
   .required();
-
-export const optionsSchema = yup
-  .object({
-    optionsValue: yup.string().required("Please Choose your type"),
-  })
-  .required();

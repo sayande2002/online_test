@@ -19,11 +19,24 @@ const Layout = ({ children }) => {
         pauseOnHover
         theme="dark"
       />
-      <Navbar />
-      <div style={{ marginTop: "100px", paddingTop: "0.2rem", height: "80vh" }}>
-        {children}
+      <div>
+        {children.type.name === "TestPage" ? (
+          <div>{children}</div>
+        ) : (
+          <>
+            <Navbar />
+            <div
+              style={{
+                marginTop: "100px",
+                paddingTop: "0.2rem",
+                height: "80vh",
+              }}
+            >
+              {children}
+            </div>
+          </>
+        )}
       </div>
-      <ScrollTop />
     </>
   );
 };
