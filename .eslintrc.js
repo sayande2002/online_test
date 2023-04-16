@@ -9,7 +9,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:tailwindcss/recommended',
-    'prettier',
+    // 'prettier',
   ],
   overrides: [],
   parserOptions: {
