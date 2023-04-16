@@ -25,8 +25,12 @@ const TestPage = () => {
     };
   }, []);
 
+  const handleContextMenu = (event) => {
+    event.preventDefault();
+    toastify('Warning ! Do not Right Click ', 'error'); // prevent the default right-click menu from showing up
+  };
   return (
-    <div>
+    <div className='h-screen w-screen' onContextMenu={handleContextMenu}>
       <Analytics />
       <div className='flex flex-col md:flex-row'>
         <Questions />
