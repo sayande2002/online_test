@@ -20,7 +20,6 @@ const Home = () => {
   const navigate = useNavigate();
   const testHandler = () => {
     navigate('/test');
-    window.location.reload();
   };
   return (
     <>
