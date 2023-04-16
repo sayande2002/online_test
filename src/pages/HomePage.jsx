@@ -28,7 +28,9 @@ const Home = () => {
           <ul className='font-semibold rounded-lg bg-slate-300'>
             <p className='text-center text-2xl'>Rules :-</p>
             {rules.map((r, i) => (
-              <span className='flex items-center justify-start p-2 gap-2'>
+              <span
+                key={i}
+                className='flex items-center justify-start p-2 gap-2'>
                 <span className='flex items-center justify-center h-7 w-7 text-lg bg-green-500 rounded-md  cursor-pointer text-white font-medium'>
                   &#10003;
                 </span>

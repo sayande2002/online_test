@@ -20,7 +20,8 @@ const Dataprovider = ({children}) => {
         setPageNumber(data.totalcountQuestion);
       });
   }, [qno]);
-
+  console.log(pageNumber);
+  console.log(answer);
   return (
     <DataContext.Provider
       value={{
