@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import Button from 'components/button';
 import NewTooltip from 'lib/tooltip';
 
@@ -17,6 +17,11 @@ const rules = [
 ];
 
 const Home = () => {
+  const navigate = useNavigate();
+  const testHandler = () => {
+    navigate('/test');
+    window.location.reload();
+  };
   return (
     <>
       {localStorage.getItem('testToken') ? (
@@ -33,9 +38,9 @@ const Home = () => {
             ))}
           </ul>
           <div className='flex items-center'>
-            <Link to='/test'>
-              <Button buttonType='inverted'>Start Test</Button>
-            </Link>
+            <Button onClick={testHandler} buttonType='inverted'>
+              Start Test
+            </Button>
           </div>
         </div>
       ) : (
