@@ -57,14 +57,6 @@ function App() {
         }
       />
       <Route
-        path='/admin'
-        element={
-          <Layout>
-            <Admin />
-          </Layout>
-        }
-      />
-      <Route
         path='*'
         element={
           <Layout>

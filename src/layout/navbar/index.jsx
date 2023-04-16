@@ -4,6 +4,7 @@ import NewTooltip from '../../lib/tooltip.jsx';
 import LargeNavbar from './largenavbar/largenavbar.jsx';
 import SmallNavbar from './smallnavbar/smallnavbar.jsx';
 import Button from 'components/button.jsx';
+import Logo from '../../assests/icons8-exam-64.png';
 
 const Navbar = () => {
   const logoutHandler = () => {
@@ -19,7 +20,7 @@ const Navbar = () => {
       <Link
         className='flex items-center justify-center px-8 py-0 text-[2rem] font-bold text-[black] no-underline'
         to='/'>
-        <NewTooltip title='Go Home'>Xam</NewTooltip>
+        <NewTooltip title='Go Home'><img src={Logo} alt="" /></NewTooltip>
       </Link>
       <LargeNavbar />
       <div className='ml-auto mr-3 flex items-center justify-center gap-3'>

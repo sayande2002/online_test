@@ -1,8 +1,6 @@
 import React from 'react';
 import {ToastContainer} from 'react-toastify';
 import Navbar from 'layout/navbar/index.jsx';
-import Footer from 'layout/footer/index.jsx';
-import ScrollTop from 'layout/scrollTop/scrollTop.jsx';
 
 const Layout = ({children}) => {
   return (

@@ -3,10 +3,10 @@
 
 export const navbarLists = [
   {
-    id: 1,
-    name: 'Home',
+    // id: 1,
+    // name: 'Home',
     // component: <HomeOutlinedIcon style={{ fill: "black", fontSize: "30px" }} />,
-    route: '/',
+    // route: '/',
   },
   {
     // id: 2,
