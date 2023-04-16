@@ -5,7 +5,7 @@ import NewTooltip from 'lib/tooltip';
 const rules = [
   'Do not Exit the Full Screen Mode in Test Page , Exam will be cancelled',
   // 'You must use a functioning webcam and microphone',
-  'Right Click is not allowed ! Exam can be cancelled',
+  'Right Click is not allowed ! Exam will be cancelled',
   'No cell phones or other secondary devices in the room or test area',
   'Your desk/table must be clear or any materials except your test-taking device',
   'No one else can be in the room with you',
