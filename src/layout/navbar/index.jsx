@@ -6,6 +6,10 @@ import SmallNavbar from "./smallnavbar/smallnavbar.jsx";
 import Button from "components/button.jsx";
 
 const Navbar = () => {
+  const logoutHandler = () => {
+    localStorage.clear();
+    window.location.reload();
+  };
   return (
     <header
       className="fixed top-0 z-50 flex h-[100px] w-full flex-row border-t-[3px]
@@ -17,16 +21,16 @@ const Navbar = () => {
         className="flex items-center justify-center px-8 py-0 text-[2rem] font-bold text-[black] no-underline"
         to="/"
       >
-        <NewTooltip title="Go Home">Goava</NewTooltip>
+        <NewTooltip title="Go Home">Xam</NewTooltip>
       </Link>
       <LargeNavbar />
       <div className="ml-auto mr-3 flex items-center justify-center gap-3">
-        {document.cookies ? (
-          <Link to="/login">
-            <NewTooltip title="Log Out">
-              <Button buttonType="inverted">Log Out</Button>
-            </NewTooltip>
-          </Link>
+        {localStorage.getItem("testToken") ? (
+          <NewTooltip title="Log Out">
+            <Button onClick={logoutHandler} buttonType="inverted">
+              Log Out
+            </Button>
+          </NewTooltip>
         ) : (
           <></>
         )}

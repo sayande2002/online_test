@@ -5,19 +5,6 @@ import Questions from "features/questions/Questions";
 import { toastify } from "lib/toast";
 
 const TestPage = () => {
-  // useEffect(() => {
-  //   const handleScreenSharing = async () => {
-  //     try {
-  //       const stream = await navigator.mediaDevices.getDisplayMedia();
-  // If the Promise resolves, the user is attempting to share their screen
-  // You can prevent screen mirroring by displaying a message or disabling the feature
-  //       console.log("Screen sharing detected");
-  //     } catch (error) {
-  //       console.error("Error detecting screen sharing:", error);
-  //     }
-  //   };
-  //   handleScreenSharing();
-  // }, []);
   useEffect(() => {
     document.documentElement.requestFullscreen();
     toastify("Best of Luck!", "success");
@@ -35,3 +22,17 @@ const TestPage = () => {
 };
 
 export default TestPage;
+
+// useEffect(() => {
+//   const handleScreenSharing = async () => {
+//     try {
+//       const stream = await navigator.mediaDevices.getDisplayMedia();
+// If the Promise resolves, the user is attempting to share their screen
+// You can prevent screen mirroring by displaying a message or disabling the feature
+//       console.log("Screen sharing detected");
+//     } catch (error) {
+//       console.error("Error detecting screen sharing:", error);
+//     }
+//   };
+//   handleScreenSharing();
+// }, []);

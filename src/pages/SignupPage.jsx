@@ -19,7 +19,7 @@ const Signup = () => {
   });
 
   const onSubmit = async ({ name, email, password }) => {
-    let result = await fetch("http://localhost:4000/api/v1/signup", {
+    let result = await fetch("http://localhost:5000/api/v1/signup", {
       method: "POST",
       body: JSON.stringify({ name, email, password }),
       headers: {

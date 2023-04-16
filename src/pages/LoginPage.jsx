@@ -19,7 +19,7 @@ const Login = () => {
   });
 
   const onSubmit = async ({ email, password }) => {
-    let result = await fetch("http://localhost:4000/api/v1/login", {
+    let result = await fetch("http://localhost:5000/api/v1/login", {
       method: "POST",
       credentials: "include",
       body: JSON.stringify({ email, password }),
@@ -28,8 +28,9 @@ const Login = () => {
       },
     });
     result = await result.json();
-    console.log(result);
+    // console.log(result);
     if (result.success) {
+      localStorage.setItem("testToken", result.token);
       toastify(result.message, "success");
       navigate("/");
       reset();

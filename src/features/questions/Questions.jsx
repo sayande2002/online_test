@@ -34,7 +34,7 @@ const Questions = () => {
         <MyTimer expiryTimestamp={time} />
       </div>
 
-      {question.map(({ _id, QuestionNumber, question }) => (
+      {question?.map(({ _id, QuestionNumber, question }) => (
         <div key={_id} className="flex gap-5">
           <p className="flex items-center justify-center h-10 w-10 bg-red-500 rounded-md  cursor-pointer text-white font-semibold">
             {QuestionNumber}

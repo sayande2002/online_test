@@ -1,7 +1,5 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
-// import ChevronLeftRoundedIcon from '@mui/icons-material/ChevronLeftRounded';
 import Button from "components/button";
 
 const Error = () => {
@@ -15,16 +13,10 @@ const Error = () => {
       </span>
       <div className="flex flex-row gap-2 ">
         <Link to={"/"}>
-          <Button buttonType="inverted">
-            {/* <HomeRoundedIcon /> */}
-            Back to Home
-          </Button>
+          <Button buttonType="inverted">Back to Home</Button>
         </Link>
         <Link onClick={() => navigate(-1)}>
-          <Button buttonType="inverted">
-            {/* <ChevronLeftRoundedIcon /> */}
-            Go Back
-          </Button>
+          <Button buttonType="inverted">Go Back</Button>
         </Link>
       </div>
     </div>

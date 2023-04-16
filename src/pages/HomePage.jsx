@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="flex items-center justify-center gap-5 mt-40">
-      {/* {document.cookies ? ( */}
-      <Link to="/test">
-        <Button buttonType="inverted">Take Test</Button>
-      </Link>
-      {/* ) : (
+      {localStorage.getItem("testToken") ? (
+        <Link to="/test">
+          <Button buttonType="inverted">Take Test</Button>
+        </Link>
+      ) : (
         <>
           <Link to="/login">
             <NewTooltip title="Log In">
@@ -22,7 +22,7 @@ const Home = () => {
             </NewTooltip>
           </Link>
         </>
-      )} */}
+      )}
     </div>
   );
 };

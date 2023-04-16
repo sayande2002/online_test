@@ -15,12 +15,12 @@ const Dataprovider = ({ children }) => {
     fetch(`http://localhost:5000/api/v1/getAllQuestion?page=${qno}`)
       .then((response) => response.json())
       .then((data) => {
+        // console.log("1", data);
         setQuestion(data.question);
         setOptions(data.question[0].options);
         setPageNumber(data.totalcountQuestion);
       });
   }, [qno]);
-  console.log("3", answer);
 
   return (
     <DataContext.Provider
