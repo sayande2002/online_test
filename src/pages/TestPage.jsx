@@ -1,19 +1,19 @@
-import React, { useEffect } from "react";
-import Analytics from "features/analytics/Analytics";
-import Number from "features/number/Number";
-import Questions from "features/questions/Questions";
-import { toastify } from "lib/toast";
+import React, {useEffect} from 'react';
+import Analytics from 'features/analytics/Analytics';
+import Number from 'features/number/Number';
+import Questions from 'features/questions/Questions';
+import {toastify} from 'lib/toast';
 
 const TestPage = () => {
   useEffect(() => {
     document.documentElement.requestFullscreen();
-    toastify("Best of Luck!", "success");
+    toastify('Best of Luck!', 'success');
   }, []);
 
   return (
     <div>
       <Analytics />
-      <div className="flex flex-col md:flex-row">
+      <div className='flex flex-col md:flex-row'>
         <Questions />
         <Number />
       </div>

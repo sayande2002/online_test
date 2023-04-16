@@ -1,7 +1,7 @@
-import { DataContext } from "context/dataContext";
-import React, { useContext, useEffect } from "react";
+import {DataContext} from 'context/dataContext';
+import React, {useContext, useEffect} from 'react';
 const ResultPage = () => {
-  const { answer } = useContext(DataContext);
+  const {answer} = useContext(DataContext);
   const rightAnswer = [0, 2, 4, 1, 3];
   var score = 0;
   useEffect(() => {
@@ -15,9 +15,9 @@ const ResultPage = () => {
     }
   }
   return (
-    <div className="flex flex-col gap-5 items-center justify-center">
-      <p className="text-4xl font-bold">Result Page</p>
-      <p className="text-xl font-bold">Your marks is {score - 1}</p>
+    <div className='flex flex-col gap-5 items-center justify-center'>
+      <p className='text-4xl font-bold'>Result Page</p>
+      <p className='text-xl font-bold'>Your marks is {score - 1}</p>
     </div>
   );
 };

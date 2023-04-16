@@ -1,22 +1,22 @@
-import React, { lazy } from "react";
-import { Routes, Route } from "react-router-dom";
-import RenderPage from "utils/RenderPage";
-import "styles/tailwind.css";
-import "react-tippy/dist/tippy.css";
-import "react-toastify/dist/ReactToastify.css";
-import HomePage from "pages/HomePage";
-import TestPage from "pages/TestPage";
-import ResultPage from "pages/ResultPage";
-import Login from "pages/LoginPage";
-import Signup from "pages/SignupPage";
-import Admin from "pages/AminPage";
-import Error from "pages/ErrorPage";
-import Layout from "layout";
+import React, {lazy} from 'react';
+import {Routes, Route} from 'react-router-dom';
+import RenderPage from 'utils/RenderPage';
+import 'styles/tailwind.css';
+import 'react-tippy/dist/tippy.css';
+import 'react-toastify/dist/ReactToastify.css';
+import HomePage from 'pages/HomePage';
+import TestPage from 'pages/TestPage';
+import ResultPage from 'pages/ResultPage';
+import Login from 'pages/LoginPage';
+import Signup from 'pages/SignupPage';
+import Admin from 'pages/AminPage';
+import Error from 'pages/ErrorPage';
+import Layout from 'layout';
 function App() {
   return (
     <Routes>
       <Route
-        path="/"
+        path='/'
         element={
           <Layout>
             <HomePage />
@@ -25,7 +25,7 @@ function App() {
       />
 
       <Route
-        path="/test"
+        path='/test'
         element={
           <Layout>
             <TestPage />
@@ -33,7 +33,7 @@ function App() {
         }
       />
       <Route
-        path="/result"
+        path='/result'
         element={
           <Layout>
             <ResultPage />
@@ -41,7 +41,7 @@ function App() {
         }
       />
       <Route
-        path="/login"
+        path='/login'
         element={
           <Layout>
             <Login />
@@ -49,7 +49,7 @@ function App() {
         }
       />
       <Route
-        path="/signup"
+        path='/signup'
         element={
           <Layout>
             <Signup />
@@ -57,7 +57,7 @@ function App() {
         }
       />
       <Route
-        path="/admin"
+        path='/admin'
         element={
           <Layout>
             <Admin />
@@ -65,7 +65,7 @@ function App() {
         }
       />
       <Route
-        path="*"
+        path='*'
         element={
           <Layout>
             <Error />

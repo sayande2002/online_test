@@ -1,14 +1,14 @@
-import React from "react";
-import { ToastContainer } from "react-toastify";
-import Navbar from "layout/navbar/index.jsx";
-import Footer from "layout/footer/index.jsx";
-import ScrollTop from "layout/scrollTop/scrollTop.jsx";
+import React from 'react';
+import {ToastContainer} from 'react-toastify';
+import Navbar from 'layout/navbar/index.jsx';
+import Footer from 'layout/footer/index.jsx';
+import ScrollTop from 'layout/scrollTop/scrollTop.jsx';
 
-const Layout = ({ children }) => {
+const Layout = ({children}) => {
   return (
     <>
       <ToastContainer
-        position="top-center"
+        position='top-center'
         autoClose={2000}
         hideProgressBar={false}
         newestOnTop
@@ -17,21 +17,20 @@ const Layout = ({ children }) => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="dark"
+        theme='dark'
       />
       <div>
-        {children.type.name === "TestPage" ? (
+        {children.type.name === 'TestPage' ? (
           <div>{children}</div>
         ) : (
           <>
             <Navbar />
             <div
               style={{
-                marginTop: "100px",
-                paddingTop: "0.2rem",
-                height: "80vh",
-              }}
-            >
+                marginTop: '100px',
+                paddingTop: '0.2rem',
+                height: '80vh',
+              }}>
               {children}
             </div>
           </>

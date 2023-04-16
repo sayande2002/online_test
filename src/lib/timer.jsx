@@ -1,9 +1,9 @@
-import React from "react";
-import { useTimer } from "react-timer-hook";
-import { toastify } from "./toast";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import {useTimer} from 'react-timer-hook';
+import {toastify} from './toast';
+import {useNavigate} from 'react-router-dom';
 
-export const MyTimer = ({ expiryTimestamp }) => {
+export const MyTimer = ({expiryTimestamp}) => {
   const navigate = useNavigate();
   const {
     seconds,
@@ -17,24 +17,24 @@ export const MyTimer = ({ expiryTimestamp }) => {
   } = useTimer({
     expiryTimestamp,
     onExpire: () => {
-      toastify("Time's Up !", "success");
-      navigate("/result");
+      toastify("Time's Up !", 'success');
+      navigate('/result');
     },
   });
 
   return (
-    <div style={{ textAlign: "center" }}>
-      <div className="text-2xl font-bold">
+    <div style={{textAlign: 'center'}}>
+      <div className='text-2xl font-bold'>
         {/* <span>{days}</span>: */}
-        <span className="bg-blue-500 font-semibold rounded-md text-white px-2">
+        <span className='bg-blue-500 font-semibold rounded-md text-white px-2'>
           {hours}
         </span>
         :
-        <span className="bg-blue-500 font-semibold rounded-md text-white px-2">
+        <span className='bg-blue-500 font-semibold rounded-md text-white px-2'>
           {minutes}
         </span>
         :
-        <span className="bg-blue-500 font-semibold rounded-md text-white px-2">
+        <span className='bg-blue-500 font-semibold rounded-md text-white px-2'>
           {seconds}
         </span>
       </div>

@@ -1,13 +1,13 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, {createContext, useEffect, useState} from 'react';
 
 export const DataContext = createContext();
 
-const Dataprovider = ({ children }) => {
+const Dataprovider = ({children}) => {
   const [question, setQuestion] = useState([]);
   const [qno, setQno] = useState(1);
   const [pageNumber, setPageNumber] = useState(0);
   const [options, setOptions] = useState([]);
-  const [radio, setRadio] = useState("");
+  const [radio, setRadio] = useState('');
   const a = [...new Array(5).fill(0)];
   const [answer, setAnswer] = useState([...a]);
 
@@ -34,8 +34,7 @@ const Dataprovider = ({ children }) => {
         setAnswer,
         radio,
         setRadio,
-      }}
-    >
+      }}>
       {children}
     </DataContext.Provider>
   );
