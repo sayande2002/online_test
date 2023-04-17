@@ -19,14 +19,17 @@ const Login = () => {
   });
 
   const onSubmit = async ({email, password}) => {
-    let result = await fetch('http://localhost:5000/api/v1/login', {
-      method: 'POST',
-      credentials: 'include',
-      body: JSON.stringify({email, password}),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    let result = await fetch(
+      'https://online-test-olive.vercel.app/api/v1/login',
+      {
+        method: 'POST',
+        credentials: 'include',
+        body: JSON.stringify({email, password}),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
     result = await result.json();
     if (result.success) {
       localStorage.setItem('testToken', result.token);

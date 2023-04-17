@@ -19,13 +19,16 @@ const Signup = () => {
   });
 
   const onSubmit = async ({name, email, password}) => {
-    let result = await fetch('http://localhost:5000/api/v1/signup', {
-      method: 'POST',
-      body: JSON.stringify({name, email, password}),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    let result = await fetch(
+      'https://online-test-olive.vercel.app/api/v1/signup',
+      {
+        method: 'POST',
+        body: JSON.stringify({name, email, password}),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
     result = await result.json();
     if (result.success) {
       toastify('Log In with your info...', 'success');

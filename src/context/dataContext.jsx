@@ -12,7 +12,9 @@ const Dataprovider = ({children}) => {
   const [answers, setAnswers] = useState([...a]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/v1/getAllQuestion?page=${qno}`)
+    fetch(
+      `https://online-test-olive.vercel.app/api/v1/getAllQuestion?page=${qno}`
+    )
       .then((response) => response.json())
       .then((data) => {
         setQuestion(data.question);
