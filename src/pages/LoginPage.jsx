@@ -20,7 +20,7 @@ const Login = () => {
 
   const onSubmit = async ({email, password}) => {
     let result = await fetch(
-      'https://online-test-olive.vercel.app/api/v1/login',
+      'http://localhost:5000/api/v1/login',
       {
         method: 'POST',
         credentials: 'include',

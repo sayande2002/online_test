@@ -13,7 +13,7 @@ const Dataprovider = ({children}) => {
 
   useEffect(() => {
     fetch(
-      `https://online-test-olive.vercel.app/api/v1/getAllQuestion?page=${qno}`
+      `http://localhost:5000/api/v1/getAllQuestion?page=${qno}`
     )
       .then((response) => response.json())
       .then((data) => {
