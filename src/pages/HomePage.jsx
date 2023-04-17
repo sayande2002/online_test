@@ -4,7 +4,6 @@ import NewTooltip from 'lib/tooltip';
 
 const rules = [
   'Do not Exit the Full Screen Mode in Test Page , Exam will be cancelled',
-  // 'You must use a functioning webcam and microphone',
   'Right Click is not allowed ! Exam will be cancelled',
   'No cell phones or other secondary devices in the room or test area',
   'Your desk/table must be clear or any materials except your test-taking device',
@@ -25,7 +24,7 @@ const Home = () => {
     <>
       {localStorage.getItem('testToken') ? (
         <div className='flex flex-col items-center justify-center gap-5 mt-2'>
-          <ul className='font-semibold rounded-lg bg-slate-300'>
+          <ul className='font-semibold rounded-lg bg-slate-300 p-2'>
             <p className='text-center text-2xl'>Rules :-</p>
             {rules.map((r, i) => (
               <span
@@ -39,9 +38,11 @@ const Home = () => {
             ))}
           </ul>
           <div className='flex items-center'>
-            <Button onClick={testHandler} buttonType='inverted'>
-              Start Test
-            </Button>
+            <NewTooltip title='Start Test'>
+              <Button onClick={testHandler} buttonType='inverted'>
+                Start Test
+              </Button>
+            </NewTooltip>
           </div>
         </div>
       ) : (

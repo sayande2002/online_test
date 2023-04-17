@@ -28,7 +28,6 @@ const Login = () => {
       },
     });
     result = await result.json();
-    // console.log(result);
     if (result.success) {
       localStorage.setItem('testToken', result.token);
       toastify(result.message, 'success');

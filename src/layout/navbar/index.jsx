@@ -20,7 +20,9 @@ const Navbar = () => {
       <Link
         className='flex items-center justify-center px-8 py-0 text-[2rem] font-bold text-[black] no-underline'
         to='/'>
-        <NewTooltip title='Go Home'><img src={Logo} alt="" /></NewTooltip>
+        <NewTooltip title='Go Home'>
+          <img src={Logo} alt='' />
+        </NewTooltip>
       </Link>
       <LargeNavbar />
       <div className='ml-auto mr-3 flex items-center justify-center gap-3'>

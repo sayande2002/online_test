@@ -2,14 +2,14 @@ import React, {useContext} from 'react';
 import {DataContext} from 'context/dataContext';
 
 const Options = () => {
-  const {question, options, answer, setAnswer, radio, setRadio} =
+  const {question, options, answers, setAnswers, radio, setRadio} =
     useContext(DataContext);
 
   const handleChange = (i, event) => {
     const {value} = event.target;
-    const tempAns = [...answer];
+    const tempAns = [...answers];
     tempAns[question[0].QuestionNumber] = i + 1;
-    setAnswer([...tempAns]);
+    setAnswers([...tempAns]);
     setRadio(value);
   };
 

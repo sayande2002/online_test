@@ -5,7 +5,7 @@ import {DataContext} from 'context/dataContext';
 
 const Number = () => {
   const [number, setNumber] = useState([]);
-  const {qno, setQno, pageNumber, answer} = useContext(DataContext);
+  const {qno, setQno, pageNumber, answers} = useContext(DataContext);
   const clickHandler = (n) => {
     setNumber([...number, n]);
     setQno(n);
@@ -20,8 +20,8 @@ const Number = () => {
             key={i}
             onClick={() => numberHandler(i)}
             className={`flex flex-wrap items-center justify-center h-10 w-10 ${
-              answer[i + 1] ? 'bg-green-500' : ''
-            }  ${answer[i + 1] === 0 && i + 1 < qno ? 'bg-red-500' : ''} 
+              answers[i + 1] ? 'bg-green-500' : ''
+            }  ${answers[i + 1] === 0 && i + 1 < qno ? 'bg-red-500' : ''} 
              rounded-md bg-blue-500 hover:bg-blue-300 cursor-pointer text-white font-semibold`}>
             {i + 1}
           </span>

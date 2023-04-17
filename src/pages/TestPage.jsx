@@ -27,7 +27,8 @@ const TestPage = () => {
 
   const handleContextMenu = (event) => {
     event.preventDefault();
-    toastify('Warning ! Do not Right Click ', 'error'); // prevent the default right-click menu from showing up
+    toastify('Exam Cancelled because you right clicked !', 'error'); // prevent the default right-click menu from showing up
+    navigate('/result');
   };
   return (
     <div className='h-screen w-screen' onContextMenu={handleContextMenu}>
@@ -41,17 +42,3 @@ const TestPage = () => {
 };
 
 export default TestPage;
-
-// useEffect(() => {
-//   const handleScreenSharing = async () => {
-//     try {
-//       const stream = await navigator.mediaDevices.getDisplayMedia();
-// If the Promise resolves, the user is attempting to share their screen
-// You can prevent screen mirroring by displaying a message or disabling the feature
-//       console.log("Screen sharing detected");
-//     } catch (error) {
-//       console.error("Error detecting screen sharing:", error);
-//     }
-//   };
-//   handleScreenSharing();
-// }, []);
